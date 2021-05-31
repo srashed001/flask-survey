@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+<h1>Welcome</h1>
+<h3>{{title}}</h3>
+<h4>{{instructions}}</h4>
+<form action="/start-survey" method="POST">
+    <button>Submit</button>
+</form>
+{% endblock %}

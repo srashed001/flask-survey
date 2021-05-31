@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block title %} Thank You {% endblock %}
+
+{% block content %}
+<h1>Thank you for completing your survey</h1>
+<h3>Below are your answers</h3>
+<ol>
+    {% for response in responses %}
+    <li>{{response}}</li>
+    {% endfor %}
+</ol>
+<p>Take Survey Again</p>
+<form action="/start-survey" method="POST">
+    <button>Start Survey</button>
+</form>
+{% endblock %}
